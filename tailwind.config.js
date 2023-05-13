@@ -8,11 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "bright-orange": "hsl(31, 77%, 52%)",
-        "dark-cyan": "hsl(184, 100%, 22%)",
-        "very-dark-cyan": "hsl(179, 100%, 13%)",
-        "transparent-white": "hsla(0, 0%, 100%, 0.75)",
-        "very-light-gray": "hsl(0, 0%, 95%)",
+        "bright-orange": "#e38826",
+        "dark-cyan": "#006970",
+        "very-dark-cyan": "	#004241",
+        "transparent-white": "	#ffffff",
+        "very-light-gray": "	#f2f2f2",
       },
     },
   },

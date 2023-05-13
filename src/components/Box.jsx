@@ -1,9 +1,26 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-const Box = ({ bgColor, name }) => {
+const Box = ({ boxNumber, name }) => {
+  const [bg, setBg] = useState(null);
+
+  useEffect(() => {
+    switch (boxNumber) {
+      case 1:
+        setBg("bg-[#e38826]");
+        break;
+      case 2:
+        setBg("bg-[#006970]");
+        break;
+      case 3:
+        setBg("bg-[#004241]");
+        break;
+    }
+  }, []);
+
   return (
-    <div className={`box p-10 bg-${bgColor}`}>
+    <div className={`box p-10 ${bg}`}>
       <Image
         src={`/assets/images/icon-${name}.svg`}
         width={64}
@@ -33,7 +50,7 @@ const Box = ({ bgColor, name }) => {
         </p>
       )}
       <a
-        className={`text-[${bgColor}] bg-very-light-gray py-[13px] px-[27px] mt-6 md:mt-[60px] inline-block rounded-[26px] border-2 border-solid border-very-light-gray`}
+        className={`text-[${bg}] bg-very-light-gray py-[13px] px-[27px] mt-6 md:mt-[60px] inline-block rounded-[26px] border-2 border-solid border-very-light-gray`}
         href="#"
       >
         Learn More
